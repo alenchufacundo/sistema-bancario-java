@@ -36,10 +36,10 @@ public class ClienteService {
         Cliente cliente = new Cliente(clientedto);
         Cliente clienteExistente = clienteDao.findByDni(cliente.getDni());
         if (clienteExistente != null) {
-            throw new ClienteAlreadyExistsException("Ya existe un cliente con DNI " + cliente.getDni());
+            throw new ClienteAlreadyExistsException("Ya existe un cliente con ese DNI " + cliente.getDni());
         }
         if (cliente.getEdad() < 18) {
-            throw new ClienteMenorEdadException("El cliente debe ser mayor de 18 anios");    
+            throw new ClienteMenorEdadException("El cliente debe ser mayor de 18 años");    
         }
         clienteDao.crearCliente(cliente);
         return cliente;

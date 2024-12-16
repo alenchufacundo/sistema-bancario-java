@@ -17,7 +17,6 @@ public class ClienteDao {
 
     private static final String CLIENTESTXT = "src\\main\\java\\ar\\edu\\utn\\frbb\\tup\\persistence\\database\\Clientes.txt";
     
-    
     public void crearCliente(Cliente cliente) {
         boolean archivoNuevo = !(new File(CLIENTESTXT).exists());
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(CLIENTESTXT, true))) {
