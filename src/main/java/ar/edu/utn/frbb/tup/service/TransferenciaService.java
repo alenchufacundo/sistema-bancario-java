@@ -39,11 +39,11 @@ public class TransferenciaService {
         Cuenta cuentaDestino = cuentaDao.obtenerCuentaPorCBU(Long.parseLong(transferenciaDto.getCuentaDestino()));
 
         if (cuentaOrigen == null) {
-            throw new CuentaNoEncontradaException("La cuenta origen no existe");
+            throw new CuentaNoEncontradaException("La cuenta de origen no existe o fue de dada de baja");
         }
 
         if (cuentaDestino == null) {
-            throw new CuentaNoEncontradaException("La cuenta destino no existe");
+            throw new CuentaNoEncontradaException("La cuenta de destino no existe o fue dada de baja");
         }
 
         Cliente clienteOrigen = clienteDao.findByDni(cuentaOrigen.getDniTitular());
