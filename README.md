@@ -1,4 +1,4 @@
-# Documentación de Controladores
+# Documentación
 
 ## ClienteController
 
