@@ -50,11 +50,13 @@ Excepciones:
 ClienteNoEncontradoException: Se lanza si no hay clientes registrados.
 Respuesta:
 200 OK con una lista de clientes.
+   
 Validaciones
 Se utiliza la clase ClienteValidator para verificar la validez de los datos de entrada en los métodos POST y PUT.
 Se valida, por ejemplo:
 Que el cliente no sea menor de edad.
 Que los datos proporcionados sean correctos.
+
 Excepciones
 El controlador maneja excepciones personalizadas:
 
@@ -104,11 +106,13 @@ Excepciones:
 CuentaNoEncontradaException: Se lanza si no existe una cuenta con el CBU especificado.
 Respuesta:
 200 OK con los datos de la cuenta eliminada.
+   
 Validaciones
 Se utiliza la clase CuentaValidator para validar los datos de entrada en el método POST.
 La validación garantiza, por ejemplo:
 Que los datos de la cuenta sean correctos.
 Que el cliente asociado exista.
+
 Excepciones
 Este controlador lanza las siguientes excepciones personalizadas:
 
@@ -149,6 +153,7 @@ Excepciones:
 MomivientosVaciosException: Se lanza si la cuenta no tiene movimientos registrados.
 Respuesta:
 200 OK con la lista de movimientos de la cuenta.
+   
 Excepciones
 Este controlador lanza las siguientes excepciones personalizadas:
 
@@ -180,6 +185,7 @@ CuentaSinSaldoException: Se lanza si la cuenta origen no tiene saldo suficiente 
 TipoMonedasInvalidasException: Se lanza si las cuentas tienen tipos de moneda diferentes.
 Respuesta:
 200 OK con los detalles de la transferencia realizada.
+   
 Excepciones
 Este controlador maneja las siguientes excepciones personalizadas:
 
