@@ -196,14 +196,6 @@ Este controlador maneja las operaciones relacionadas con las **transferencias** 
 - **Respuesta**: `200 OK` con los detalles de la transferencia realizada.
 
 
-## Funcionalidades
-
-- **Mostrar todos los clientes**: Recupera una lista de clientes.
-- **Mostrar cliente específico**: Recupera un cliente específico según su DNI.
-- **Modificar cliente**: Permite modificar la información de un cliente.
-- **Borrar cliente**: Elimina un cliente del sistema.
-- **Dar de alta cliente**: Registra un nuevo cliente en el sistema.
-
 ## Uso de Mockito para pruebas unitarias
 
 Se utilizan pruebas unitarias con **Mockito** para simular el comportamiento de los servicios y verificar el correcto funcionamiento del controlador.
