@@ -1,5 +1,7 @@
 Documentacion:
+
 ClienteController
+
 Este controlador maneja las operaciones CRUD relacionadas con la entidad Cliente a través de endpoints REST.
 
 1. POST /clientes - Crear Cliente
@@ -62,7 +64,9 @@ ClienteNoEncontradoException: Cliente no existente en la base de datos.
 
 
 ---------------------------------------------------------------------------------------------------------------
+
 CuentaController
+
 Este controlador maneja las operaciones relacionadas con la entidad Cuenta mediante endpoints REST.
 
 1. POST /cuentas/crearCuenta - Crear Cuenta
@@ -113,7 +117,9 @@ CuentaNoEncontradaException: Cuenta no encontrada en las consultas o eliminació
 
 -------------------------------------------------------------------------------------------------------------------------
 
+
 MovimientosController
+
 Este controlador maneja las operaciones relacionadas con los movimientos de cuentas bancarias (depósitos, retiros y consultas de operaciones).
 
 1. POST /movimientos/deposito/{cbu} - Realizar Depósito
@@ -153,6 +159,7 @@ MomivientosVaciosException: Se lanza si la cuenta no tiene movimientos registrad
 ----------------------------------------------------
 
 TransferenciaController
+
 Este controlador maneja las operaciones relacionadas con las transferencias entre cuentas y la consulta de transacciones asociadas a un CBU.
 
 1. GET /api/cuenta/{cbu}/transacciones - Obtener Transacciones por CBU
