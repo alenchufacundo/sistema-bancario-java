@@ -49,6 +49,15 @@ public class TransferenciaService {
         Cliente clienteOrigen = clienteDao.findByDni(cuentaOrigen.getDniTitular());
         Cliente clienteDestino = clienteDao.findByDni(cuentaDestino.getDniTitular());
 
+        // Validar si los clientes existen
+        if (clienteOrigen == null) {
+            throw new IllegalArgumentException("El cliente de origen no existe o no está registrado");
+        }
+
+        if (clienteDestino == null) {
+            throw new IllegalArgumentException("El cliente de destino no existe o no está registrado");
+        }
+
         if (cuentaOrigen.getBalance() < transferencia.getMonto()) {
             throw new CuentaSinSaldoException("Fondos insuficientes en la cuenta origen");
         }
